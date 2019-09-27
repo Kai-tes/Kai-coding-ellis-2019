@@ -1,0 +1,139 @@
+* {box-sizing: border-box;}
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+body{
+    background-color: rgb(58, 58, 58);
+}
+
+.wrapper > div {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background-color: rgb(58, 58, 58);
+  padding: 1em;
+  color: rgb(255, 255, 255);
+}.wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(100px, auto);
+}
+.two { 
+  grid-column: 1 / 4;
+  grid-row: 1;
+  margin-top: 45px;
+}
+.three {
+    grid-column: 1 / 4;
+    grid-row: 2;
+}
+.four {
+    grid-column: 1 / 4;
+    grid-row: 3;
+}
+.five {
+    grid-column: 1 / 4;
+    grid-row: 4;
+}
+.six {
+    grid-column: 1 / 4;
+    grid-row: 5;
+}
+.seven {
+    grid-column: 1 / 4;
+    grid-row: 6;
+}
+
+#contentbox {
+    text-align: left;
+    float: left;
+    box-sizing: content-box;
+    width: 300px;
+    height: 500px;
+    border: solid 10px;
+    border-color: rgb(0, 0, 0);
+    margin-top: 80px;
+    font-size: 18px;
+    background: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    margin-left: 50px;
+}
+#img5{
+    height: 100px;
+    width: 100px;
+    margin-top: 75px;
+    }
+#img4{
+    height: 100px;
+    width: 100px;
+    margin-top: 30px;
+    }
+#img3{
+    height: 100px;
+    width: 100px;
+    margin-top: 155px; 
+    }
+#img2{
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
+}
+#img{
+    height: 100px;
+    width: 100px;
+    margin-top: 50px;
+ }
+
+li.nav.maintitle {
+    color: rgb(255, 255, 255);
+    float: right;
+    font-size: 40px;
+    padding-right: 15px;
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(58, 58, 58);
+    max-width: 1280px;
+    border-style: solid;
+}
+  
+li.nav {
+float: left;
+}
+
+li.nav a {
+display: block;
+color: rgb(255, 255, 255);
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+  
+/* Change the link color to #111 (black) on hover */
+li.nav a:hover {
+background-color: #111;
+}
+
+ul.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 0px;
+}
+
+li.nav {
+    border-right: 1px solid rgb(255, 255, 255);
+}
+  
+li.nav:last-child {
+    border-right: none;
+}
+div.seven{
+    font-size: 30px;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="t101-inputoutputKai">
+<link rel="stylesheet" href="index.html">
+    <h1>Looping-Function</h1>
+
+<style>
+    h1{
+        color: white;
+        margin-left: 500px;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        margin-left: 425px;
+        padding-top: 50px;
+        font-size: 50px;
+    }
+    body{
+        background-color: rgb(58, 58, 58);
+    }
+
+    #myLoop{
+        background-color: rgb(48, 47, 47) ;
+        color: white ;
+        border-color: rgb(122, 121, 120)s ;
+        margin-left: 500px;
+    }
+    #Loop-Function{
+            background-color: rgb(48, 47, 47) ;
+            color: white;
+            margin-left: 500px;
+            margin-top: 10px;
+    }
+    #myDiv01{
+            color: white;
+            margin-left: 500px;
+    }
+   
+
+</style>
+
+<script>
+
+function myExampleFunction(){
+    let myTemp = document.getElementById('myLoop').value
+    let mySum = ''
+    document.getElementById('myDiv01').innerHTML = ''
+
+/*
+myArray = new Array()
+myArray[0] = '0'
+myArray[1] = '1'
+myArray[2] = '2'
+myArray[3] = '3'
+myArray[4] = '4'
+myArray[5] = '5'
+myArray[6] = '6'
+myArray[7] = '7'
+myArray[8] = '8'
+myArray[9] = '9'
+myArray[10] = '10'
+myArray[11] = '11'
+myArray[12] = '12'
+myArray[13] = '13'
+myArray[14] = '14'
+myArray[15] = '15'
+myArray[16] = '16'
+myArray[17] = '17'
+myArray[18] = '18'
+myArray[19] = '19'
+myArray[20] = '20'
+myArray[21] = '21'
+myArray[22] = '22'
+myArray[23] = '23'
+myArray[24] = '24'
+myArray[25] = '25'
+myArray[26] = '26'
+myArray[27] = '27'
+myArray[28] = '28'
+myArray[29] = '29'
+myArray[30] = '30'
+myArray[31] = '31'
+myArray[32] = '32'
+myArray[33] = '33'
+myArray[34] = '34'
+myArray[35] = '35'
+myArray[36] = '36'
+myArray[37] = '37'
+myArray[38] = '38'
+myArray[39] = '39'
+myArray[40] = '40'
+myArray[41] = '41'
+myArray[42] = '42!!!!'
+myArray[43] = '43'
+myArray[44] = '44'
+myArray[45] = '45'
+myArray[46] = '46'
+myArray[47] = '47'
+myArray[48] = '48'
+myArray[49] = '49'
+myArray[50] = '50'
+myArray[51] = '51'
+myArray[52] = '52'
+myArray[53] = '53'
+myArray[54] = '54'
+myArray[55] = '55'
+myArray[56] = '56'
+myArray[57] = '57'
+myArray[58] = '58'
+myArray[59] = '59'
+myArray[60] = '60'
+myArray[61] = '61'
+myArray[62] = '62'
+myArray[63] = '63'
+myArray[64] = '64'
+myArray[65] = '65'
+myArray[66] = '66'
+myArray[67] = '67'
+myArray[68] = '68'
+myArray[69] = '69'
+myArray[70] = '70'
+myArray[71] = '71'
+myArray[72] = '72'
+myArray[73] = '73'
+myArray[74] = '74'
+myArray[75] = '75'
+myArray[76] = '76'
+myArray[77] = '77'
+myArray[78] = '78'
+myArray[79] = '79'
+myArray[80] = '80'
+myArray[81] = '81'
+myArray[82] = '82'
+myArray[83] = '83'
+myArray[84] = '84'
+myArray[85] = '85'
+myArray[86] = '86'
+myArray[87] = '87'
+myArray[88] = '88'
+myArray[89] = '89'
+myArray[90] = '90'
+myArray[91] = '91'
+myArray[92] = '92'
+myArray[93] = '93'
+myArray[94] = '94'
+myArray[95] = '95'
+myArray[96] = '96'
+myArray[97] = '97'
+myArray[98] = '98'
+myArray[99] = '99'
+myArray[100] = '100'
+*/
+
+ let myArray = [];
+     for (let i=0; i<101; i++){
+         myArray.push(i);
+     }
+     
+     console.log(myArray);
+
+
+for (let myLoop =0; myLoop < myTemp; myLoop++) {
+        mySum += 'Loop #: ' + myLoop + '<br>'
+        mySum += 'array entry:' + myArray[myLoop] + '<br>'
+    }
+
+    document.getElementById('myDiv01').innerHTML = mySum
+
+}
+
+</script>
+
+<input type=text id="myLoop" value="3"><br>
+
+<input type=button id="Loop-Function" value="loop-array-function-event" onmouseover="{
+    myExampleFunction()
+}">
+
+
+<div id="myDiv01">...</div>
+

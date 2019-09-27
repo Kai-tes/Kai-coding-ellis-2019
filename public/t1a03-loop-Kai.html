@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="t101-inputoutputKai">
+<link rel="stylesheet" href="index.html">
+    <h1>Looping</h1>
+
+<style>
+    h1{
+        color: white;
+        margin-left: 500px;
+        font-size: 50px;
+    }
+    h2{
+        color: white;
+        margin-left: 425px;
+        padding-top: 50px;
+        font-size: 50px;
+    }
+    body{
+        background-color: rgb(58, 58, 58);
+    }
+
+    #myText01{
+        background-color: rgb(48, 47, 47) ;
+        color: white ;
+        border-color: rgb(122, 121, 120)s ;
+        margin-left: 500px;
+    }
+    #myText02{
+        background-color: rgb(48, 47, 47) ;
+        color: white ;
+        border-color: rgb(122, 121, 120)s ;
+        margin-left: 500px;
+        margin-top: 25px;
+    }
+    #Loop{
+            background-color: rgb(48, 47, 47) ;
+            color: white;
+            margin-left: 570px;
+    }
+    #myDiv01{
+            color: white;
+            margin-left: 570px;
+    }
+    #myDiv02{
+            color: white;
+            margin-left: 570px;
+    }
+    #Neg_Loop{
+            background-color: rgb(48, 47, 47) ;
+            color: white;
+            margin-left: 570px;
+            margin-top: 50px;
+    }
+
+</style>
+
+    <input type="text" id="myText01" value="0"><br>
+
+<br>
+        <input type=button id="Loop"  value="Loop" onclick="{
+
+            let myTemp = document.getElementById('myText01').value
+            let mySum = ''
+                document.getElementById('myDiv01').innerHTML = ''
+            for (let myLoop01 = 0; myLoop01 <= myTemp; myLoop01++) {
+                mySum += 'Loop #: ' + myLoop01 + '<br>'
+            }
+                document.getElementById('myDiv01').innerHTML = mySum
+
+}">  
+            <div id="myDiv01">...</div>
+            <h2>Negitive Looping</h2>
+        <input type="text" id="myText02" value="0"><br>
+
+            <input type=button id="Neg_Loop"  value="-Loop" onclick="{
+
+            let myTemp = document.getElementById('myText02').value
+            let mySum = ''
+                document.getElementById('myDiv02').innerHTML = ''
+            for (let myLoop02 = -1; myLoop02 >= myTemp; myLoop02--) {
+                 mySum += 'Loop #: ' + myLoop02 +'<br>'
+            }
+                document.getElementById('myDiv02').innerHTML = mySum
+   
+}">
+<br>
+
+    <div id="myDiv02">...</div>
