@@ -1,0 +1,142 @@
+<style>
+ body{
+            background-color: rgb(58, 58, 58);
+          
+        }
+        h1{
+          margin-left: 350px;
+          font-size: 30px;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+            border-color: black;
+            width: 300px;
+            text-align: center;
+        }
+    #text{
+      font-size: 15px;
+            font-weight: bold 10px;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+            width: 300px;
+            text-align: left;
+           border-color: black;
+}
+
+#myDiv01 {
+  width:  200px;
+  height: 200px;
+  position: absolute;
+  color: white;
+
+}
+#myContainer {
+  width:  10px;
+  height: 10px;
+  background-color:rgb(58, 58, 58); 
+    position: relative;
+}
+a{
+  color:  rgb(88, 88, 235)
+}
+h2{
+          font-size: 30px;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+            width: 300px;
+            text-align: center;
+            border-color: black;
+}
+button{
+  font-size: 15px;
+            font-weight: bold;
+            border-style: solid;
+            border-width: 5px;
+            background-color: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+            width: 100px;
+            text-align: center;
+            border-color: black;
+}
+</style>
+
+
+
+<h1> Align=center>CSS by Kai</h1>
+
+
+<p id="text">
+3 Links to references and at lest 8 other CSS commands on this page\/
+</p>
+<a 
+href="https://www.w3schools.com/css/">https://www.w3schools.com/css/</a><br><br>
+
+
+
+  
+
+   <p>
+      <button id="button" onclick="myMove()">Animate (Click)</button> 
+      </p>
+      
+      <div id ="myContainer">
+       <div id="myDiv01" >Kai</div>
+      </div>
+      
+      <script>
+      function myMove() {
+        var elem = document.getElementById("myDiv01");   
+        var pos = 0;
+        var id = setInterval(frame, 10);
+        function frame() {
+          if (pos >= 350) {
+           // clearInterval(Id);
+           // pos = 0
+           // alert()
+            pos = 0
+            elem.style.left = pos + 'px'; 
+            clearInterval(id);
+          }
+          
+          else {
+            pos++; 
+            elem.style.top = pos - 'px'; 
+            elem.style.left = pos + 'px'; 
+          }
+        }
+      }
+      </script>
+
+<p id="text"> Regular paragraph </p>
+<p id="text">class="ex">This is a paragraph with class="ex"<. This text is blue.</p>
+
+<br><br><br>
+
+<h2>You Should try:</h2>
+
+<p id="text">
+background-image for a textarea <br>
+</p>
+
+<p id="text">
+border-color, border-style, width  for a div <br>
+</p>
+
+<p id="text">
+list-style-image   for <Ul><li><li> </Ul>
+</p>
+
+<p id="text">
+    or <Ol><li><li</Ol> lists <br>
+</p>
+
+<p id="text">
+        z-index  for overlapping images <br>
+     </p>   
