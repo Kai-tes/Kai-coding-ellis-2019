@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <link rel="stylesheet" href="t101-inputoutputKai">
 <link rel="stylesheet" href="index.html">
-    <h1>t1a08-Javascript-CSS</h1>
-
+    <h1 id="H1">t1a08-Javascript-CSS</h1>
+<body id="body">
     
+
 
 <style>
     h1{
@@ -53,11 +54,23 @@ let myTemp = document.getElementById('myText01').value
 document.getElementById('myDiv01').style.borderStyle = myTemp
 }">
 
-<option value="groove">groove
-<option value="dotted">dotted
-<option value="...">...
+<div id="div">
+    <option value="groove">Groove
+    <option value="dotted">Dotted
+    <option value="solid">Solid
+    <option value="dashed">Dashed
+    <option value="double">Double
+    <option value="ridge">Ridge
+    <option value="inset">Inset
+    <option value="outset">Outset
+    <option value="none">None
+    <option value="...">...
 </select>
+</div>
+
 <br><br>
+
+
 <span id="myDiv01" style="border-style:groove; border-width:4; border-color:red;">This is a box</span><br><br>
 
 
@@ -71,6 +84,8 @@ document.getElementById('myText02').style.fontSize = '20px'
 
 
 <input id= myCheck01 type="checkbox" value="Check" onclick="{
+    document.getElementById('body').style.background = 'purple'
+    document.getElementById('H1').style.color = 'black'
 }">Check
 
 
@@ -83,16 +98,29 @@ document.getElementById('myText02').style.fontSize = '20px'
 <br><br>
 
 
-<input type="search" value="Search Bar">
+<input type="reset" onclick="{
+document.getElementById('H1').style.color = 'white'
+document.getElementById('body').style.background = 'rgb(58, 58, 58)'
+}">
 
 
 <br><br>
 
-<p>Color Wheel</p>
-<input type="color">
+<p id="p">Color Wheel</p>
+<input id="color" type="color" oninput="{
+document.getElementById('p').style.color = 'pink'
+}">
 
 
 <br><br>
 
 
 <input type="range">
+
+
+
+
+
+
+
+</body>
