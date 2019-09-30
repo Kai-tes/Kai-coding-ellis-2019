@@ -1,2 +1,98 @@
-<link rel="stylesheet" href="t1a08-Javascript-css-Kai.html">
-<h1>ye</h1> 
+<!DOCTYPE html>
+<link rel="stylesheet" href="t101-inputoutputKai">
+<link rel="stylesheet" href="index.html">
+    <h1>t1a08-Javascript-CSS</h1>
+
+    
+
+<style>
+    h1{
+        color: white;
+       text-align: center;
+    }
+    h3{
+        color: white;
+        text-align: center;
+    }
+
+    body{
+        background-color: rgb(58, 58, 58);
+        color: white;
+    }
+
+    #myB01{
+        background-color: rgb(48, 47, 47) ;
+        color: white ;
+        border-color: rgb(122, 121, 120)s ;
+    
+ 
+    }
+    #button{
+            background-color: rgb(48, 47, 47) ;
+            color: white;
+          
+    }
+    #myDiv01{
+            color: white;
+    }
+    #myCheck01{
+        color: white;
+    }
+</style>
+
+
+<input id="button" type= button value="change" onclick="{
+document.getElementById('myB01').style.color = 'blue'    
+}">
+
+
+<b id="myB01" style="color:red">Hi This is cool</b><br><br>
+
+<select id="myText01" size=1 onchange="{
+let myTemp = document.getElementById('myText01').value
+document.getElementById('myDiv01').style.borderStyle = myTemp
+}">
+
+<option value="groove">groove
+<option value="dotted">dotted
+<option value="...">...
+</select>
+<br><br>
+<span id="myDiv01" style="border-style:groove; border-width:4; border-color:red;">This is a box</span><br><br>
+
+
+<input id=myText02 type="text" value="Type Here then Enter" onchange="{
+document.getElementById('myText02').style.fontSize = '20px'
+}">
+
+
+<br><br>
+
+
+
+<input id= myCheck01 type="checkbox" value="Check" onclick="{
+}">Check
+
+
+<br><br>
+
+
+<input type="datetime-local">
+
+
+<br><br>
+
+
+<input type="search" value="Search Bar">
+
+
+<br><br>
+
+<p>Color Wheel</p>
+<input type="color">
+
+
+<br><br>
+
+
+<input type="range">
