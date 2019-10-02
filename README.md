@@ -9,6 +9,9 @@ To Load the Gitpod
 
 https://gitpod.io/#github.com/Kai-tes/Kai-coding-ellis-2019
 
+In Gitpod type this command
+
+```apachctl start```
 
 
 general github
