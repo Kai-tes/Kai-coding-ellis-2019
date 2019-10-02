@@ -5,6 +5,11 @@ coding class website
 
 https://kai-tes.github.io/Kai-coding-ellis-2019/public/
 
+To Load the Gitpod
+
+https://gitpod.io/#github.com/Kai-tes/Kai-coding-ellis-2019
+
+
 
 general github
 
