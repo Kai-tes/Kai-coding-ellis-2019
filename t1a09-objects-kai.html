@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<style>
+     body{
+            background-color: rgb(58, 58, 58);
+            color: rgb(255, 255, 255);
+        }
+        h1{
+          border-radius: 25px;
+          background: #73AD21;
+          padding: 50px; 
+          width: 500px;
+          height: 30px; 
+          background-color: rgb(58, 58, 58);
+        }
+        div{
+          color: rgb(255, 255, 255);
+          border-radius: 25px;
+          background: #73AD21;
+          
+          background-color: rgb(58, 58, 58);
+        }
+        a{
+          color: rgb(110, 173, 255);
+        }
+        #myTextarea01{
+            padding-bottom:  50px;
+        }
+</style>
+
+
+<h1 align=center>t1a09-objects-kai.html <br>
+    
+    Objects, Decsions, Decimals by Kai</h1>
+
+    You add bodyTemp an determine if the user has a fever. <br>
+    advance: input the body temp into the object <br>
+
+    body Temp: <input type="text" id="myText01" value="36.1">Degrees 
+    Celcius <br>
+    
+<input type=button value="Input/Output" onclick="{
+    let myAdult = {'age':'22', 'name':'Fred'};
+
+    let myTemp = document.getElementById('myText01').value
+
+    let myPrintout = 'myAdult object :' +
+JSON.stringify(myAdult, null, 3) + ' myAdult.age :' +
+myAdult.age
+    let myIf = 'cool'
+    if (parseInt(myAdult.age) >= 18) {myIf = 'You are a Adult'}
+    
+    document.getElementById('myDiv01').innerHTML = myIf
+    document.getElementById('myTextArea01').value = myPrintout
+
+}">
+
+<div id="myDiv01">...</div> <br>
+<textarea id="myTextArea01"  rows=10 cols=80>...</textarea>
