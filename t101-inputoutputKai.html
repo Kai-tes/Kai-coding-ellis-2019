@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="index.html">
+    <h1>Input/Output Stuff</h1>
+
+
+
+    <input type="text" id="myNumber01" value="3"><br>
+
+<br>
+        <input type=button id="run" value=run onclick="{
+            let myNumber01 = Math.abs(document.getElementById('myNumber01').value)
+            let myTemp = 'Yes'
+            //let myTemp = document.getElementById('myNumber01').value
+            //document.getElementById('myDiv01').innerHTML = myTemp
+            if (myNumber01 != 3){ myTemp = 'no'}
+
+            document.getElementById('myDiv01').innerHTML = myTemp     
+    }">
+<br>
+
+    <div id="myDiv01">...</div>
+    
