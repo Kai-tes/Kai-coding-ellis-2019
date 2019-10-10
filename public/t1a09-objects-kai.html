@@ -40,19 +40,35 @@
     
 <input type=button value="Input/Output" onclick="{
     let myAdult = {'age':'22', 'name':'Fred'};
+    let myLizard = {'age':'300', 'name':'Big Toe'};
+    let myGoat = {'age':'19', 'name':'Ankle'};
+    let myIf = 'cool';
+    let myTemp = document.getElementById('myText01').value;
+    console.log(myTemp);
 
-    let myTemp = document.getElementById('myText01').value
-
-    let myPrintout = 'myAdult object :' +
-JSON.stringify(myAdult, null, 3) + ' myAdult.age :' +
-myAdult.age
-    let myIf = 'cool'
-    if (parseInt(myAdult.age) >= 18) {myIf = 'You are a Adult'}
-    
-    document.getElementById('myDiv01').innerHTML = myIf
-    document.getElementById('myTextArea01').value = myPrintout
+    if (parseFloat(myTemp) == 37){
+      let myPrintout = 'myAdult object :' + JSON.stringify(myAdult, null, 3); 
+      document.getElementById('myDiv01').innerHTML = myIf  + '<br> myAdult.age : ' + myAdult.age;
+      document.getElementById('myDiv01').innerHTML += '<br> myAdult.name : ' + myAdult.name;
+      document.getElementById('myTextArea01').value = myPrintout;
+    }else if(parseFloat(myTemp) == 24){
+      let myPrintout = 'myLizard object :' + JSON.stringify(myLizard, null, 3);  
+      document.getElementById('myDiv01').innerHTML = myIf  + '<br> myLizard.age : ' + myLizard.age;
+      document.getElementById('myDiv01').innerHTML += '<br> myLizard.name : ' + myLizard.name;
+      document.getElementById('myTextArea01').value = myPrintout;
+    }else if(parseFloat(myTemp) == 39.4){
+      let myPrintout = 'myGoat object :' + JSON.stringify(myGoat, null, 3);  
+      document.getElementById('myDiv01').innerHTML = myIf  + '<br> myGoat.age : ' + myGoat.age;
+      document.getElementById('myDiv01').innerHTML += '<br> myGoat.name : ' + myGoat.name;
+      document.getElementById('myTextArea01').value = myPrintout;
+    }
 
 }">
 
 <div id="myDiv01">...</div> <br>
 <textarea id="myTextArea01"  rows=10 cols=80>...</textarea>
+<p>Input 37 to be a  Human</p>
+<p>Input 24 to be a Lizard</p>
+<p>Input 39.4 to be a Goat</p>
+
+
