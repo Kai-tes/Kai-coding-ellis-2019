@@ -54,10 +54,10 @@
 
     let myPrintout='myObjectArray = '+JSON.stringify(myObjectArray,null,3)
     document.getElementById('myTextArea01').value = myPrintout
-    document.getElementById('myDiv01').innerHTML = 'myObjectArray.myNames[1] = ' + myObjectArray.myNames[1];
-    document.getElementById('myDiv02').innerHTML = 'myObjectArray.age[1] = ' + myObjectArray.age;
-    document.getElementById('myDiv03').innerHTML = 'myObjectArray.favcolor[1] = ' + myObjectArray.favcolor;
-    document.getElementById('myDiv04').innerHTML = 'myObjectArray.myFun[0] = ' + myObjectArray.myFun[0];
+    document.getElementById('myDiv01').innerHTML = 'myObjectArray.MyNames[1] = ' + myObjectArray.myNames[1]
+    document.getElementById('myDiv02').innerHTML = 'myObjectArray.Age = ' + myObjectArray.age
+    document.getElementById('myDiv03').innerHTML = 'myObjectArray.Favcolor = ' + myObjectArray.favcolor
+    document.getElementById('myDiv04').innerHTML = 'myObjectArray.MyFun[0] = ' + myObjectArray.myFun[0]
  }">
 
  <input id="myAO" type="button" value="Show Array Object" onclick="{
@@ -68,8 +68,8 @@
 
     document.getElementById('myTextArea01').value = myPrintout
     document.getElementById('myDiv01').innerHTML = 'myArrayObject[0].Name = ' + myArrayObject[0]
-    document.getElementById('myDiv02').innerHTML = 'myArrayObject[1].Age = ' + myArrayObject[1].age
-    document.getElementById('myDiv03').innerHTML = 'myArrayObject[1].Hair = ' + myArrayObject[1].hair
+    document.getElementById('myDiv02').innerHTML = 'myArrayObject[2].Age = ' + myArrayObject[2].age
+    document.getElementById('myDiv03').innerHTML = 'myArrayObject[2].Hair = ' + myArrayObject[2].hair
     document.getElementById('myDiv04').innerHTML = 'myArrayObject[1].FavFruit = ' + myArrayObject[1]
  }">
 
