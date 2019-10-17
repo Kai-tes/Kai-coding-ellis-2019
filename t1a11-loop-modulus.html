@@ -1,0 +1,73 @@
+<h1 align=center>t1a11-loop-modulus by Kai</h1>
+<style>
+body{
+    background-color: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+}
+h1{
+    border-radius: 25px;
+    background: #73AD21;
+    padding: 20px; 
+    width: 500px;
+    height: 30px; 
+    background-color: rgb(58, 58, 58);       
+}
+myMessage{
+    color: white;
+}
+
+
+</style>
+
+Enter any Number of loops <input type="text" value="25" id="myText01"><br>
+<p>Type 100 to See All The Features</p>
+<input type="button" value="Modulus Decisions" onclick="{
+
+    let myLoopMax = document.getElementById('myText01').value
+    let myTemp =''
+    let myFontcolor
+    let myMessage 
+
+    for (let myLoop=0; myLoop <= myLoopMax; myLoop++){
+        myFontcolor = 'white'
+        myMessage = ''
+    
+     if (myLoop  % 5 == 0){
+         myFontcolor = 'red'
+         myMessage += ' Divisible by 5,' 
+         
+     }  
+     if (myLoop  % 2 == 1){
+        myFontcolor = 'orange'
+        myMessage += ' Odd,' 
+     }
+     if (myLoop - 42 == 0){
+        myFontcolor = 'yellow'
+         myMessage +=  ' **Answer to the Universe**,'
+     }
+     if (myLoop - 16 == 0){
+        myFontcolor = 'green'
+         myMessage += ' My Age,'
+     }
+     if (myLoop - 25 == 0){
+        myFontcolor = 'blue'
+         myMessage += ' 1/4 of 100,'
+     }
+     if (myLoop - 50 == 0){
+        myFontcolor = 'purple'
+         myMessage += ' 2/4 of 100,'
+     }
+     if (myLoop - 75 == 0){
+        myFontcolor = 'grey'
+         myMessage += ' 3/4 of 100,'
+     }
+     if (myLoop - 100 == 0){
+        myFontcolor = 'black'
+         myMessage += ' 4/4 of 100,'
+     }
+     myTemp += '<font color='+myFontcolor+'> Loop #' + myLoop + '</font>' + myMessage + '<br>'
+    }
+    document.getElementById('myDiv01').innerHTML = myTemp
+}"><br><br>
+
+<div id="myDiv01">...</div>
