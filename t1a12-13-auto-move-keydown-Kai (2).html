@@ -1,0 +1,228 @@
+<h1 id="title">t1a12-Auto-Move</h1>
+
+
+<style>
+#title{
+    text-align: center;
+    font-size: 50px;
+    }
+#myDiv01{
+    width:  2px;
+    height: 2px;
+    position: absolute;
+    color: white;
+  
+  }
+  #myContainer {
+    width:  10px;
+    height: 10px;
+    background-color:rgb(58, 58, 58); 
+      position: relative;
+  }
+  #button{
+      padding: 0px;
+  }
+</style>
+<p>
+        <button id="button" onclick="myMove()">Animate (Click)</button> 
+        </p>
+        
+        <p id ="myContainer">
+         <p id="myDiv01" >Kai</p>
+        </p>
+        
+        <script>
+        function myMove() {
+          var elem = document.getElementById("myDiv01");   
+          var pos = 0;
+          var id = setInterval(frame, 10);
+          function frame() {
+            if (pos >= 350) {
+             // clearInterval(Id);
+             // pos = 0
+             // alert()
+              pos = 0
+              elem.style.left = pos + 'px'; 
+              clearInterval(id);
+            }
+            
+            else {
+              pos++; 
+              elem.style.top = pos - 'px'; 
+              elem.style.left = pos + 'px'; 
+            }
+          }
+        }
+
+</script>
+
+<style>
+body{
+    background-color: rgb(58, 58, 58);
+    color: rgb(255, 255, 255);
+}
+#p1{
+    position: fixed;
+}
+#p2{
+    position: fixed;
+}
+#Kai{
+    margin-top: 50px;
+    font-size: 20px;
+    border: rgb(58, 58, 58) 1px solid;
+    height: 50px;
+    width: 250px;
+}
+#Ellis{
+    margin-top: 50px;
+    font-size: 20px;
+    height: 50px;
+    width: 250px;
+}
+div{
+    display: inline;
+}
+</style>
+
+
+<h1 id="Kai">Press WASD (Player 1)</h1> 
+
+<div id="p1">Player 1<br><div class="p1Details"></div></div>
+
+<h1 id="Ellis">Press ArrowKeys (Player 2)</h1>
+
+<div id="p2">Player 2<br><div class="p2Details"></div></div>
+
+
+<script>
+    var up = false,
+    right = false,
+    down = false,
+    left = false,
+    x = window.innerWidth/6-630/6,
+    y = window.innerHeight/1-430/1
+document.addEventListener('keydown',press)
+function press(e){
+  if (e.keyCode === 87){
+    up = true;
+  }
+  if (e.keyCode === 68 ){
+    right = true
+  }
+  if (e.keyCode === 83 ){
+    down = true
+  }
+  if (e.keyCode === 65 ){
+    left = true
+  }
+}
+document.addEventListener('keyup',release)
+function release(e){
+  if (e.keyCode === 87){
+    up = false
+  }
+  if (e.keyCode === 68 ){
+    right = false
+  }
+  if (e.keyCode === 83 ){
+    down = false
+  }
+  if (e.keyCode === 65 ){
+    left = false
+  }
+}
+function gameLoop(){
+  var p1 = document.querySelector('div#p1')
+  let p1D = document.querySelector('div.p1Details');
+
+  if (up){
+    y = y - 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (right){
+    x = x + 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (down){
+    y = y + 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (left){
+    x = x - 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  p1.style.left = x+'px'
+  p1.style.top = y+'px'
+
+
+  window.requestAnimationFrame(gameLoop)
+}
+window.requestAnimationFrame(gameLoop)
+</script>
+
+<script>
+  var up2 = false,
+  right2 = false,
+  down2 = false,
+  left2 = false,
+  x2 = window.innerWidth/6-630/6,
+  y2 = window.innerHeight/1-330/1
+document.addEventListener('keydown',press2)
+function press2(e){
+if (e.keyCode === 38){
+  up2 = true
+}
+if (e.keyCode === 39 ){
+  right2 = true
+}
+if (e.keyCode === 40 ){
+  down2 = true
+}
+if (e.keyCode === 37 ){
+  left2 = true
+}
+}
+document.addEventListener('keyup',release2)
+function release2(e){
+if (e.keyCode === 38){
+  up2 = false
+}
+if (e.keyCode === 39 ){
+  right2 = false
+}
+if (e.keyCode === 40 ){
+  down2 = false
+}
+if (e.keyCode === 37 ){
+  left2 = false
+}
+}
+function gameLoop2(){
+var p2 = document.querySelector('div#p2')
+  let p2D = document.querySelector('div.p2Details');
+if (up2){
+  y2 = y2 - 10
+  p2D.innerHTML = "X2: " + x2 + "Y2: " + y2;
+}
+if (right2){
+  x2 = x2 + 10
+  p2D.innerHTML = "X2: " + x2 + "Y2: " + y2;
+}
+if (down2){
+  y2 = y2 + 10
+  p2D.innerHTML = "X2: " + x2 + "Y2: " + y2;
+}
+if (left2){
+  x2 = x2 - 10
+  p2D.innerHTML = "X2: " + x2 + "Y2: " + y2;
+}
+p2.style.left = x2+'px'
+p2.style.top = y2+'px'
+window.requestAnimationFrame(gameLoop2)
+}
+window.requestAnimationFrame(gameLoop2)
+</script>
+
+
+<!------ I cant get player to to move also can you put Player 1's default position under its were it says "Press WASD (Player 1) "-->
