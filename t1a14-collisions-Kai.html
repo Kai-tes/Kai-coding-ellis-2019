@@ -19,9 +19,51 @@ border: solid white 4px;
 #myScore01{
     margin-left: 500px;
 }
+#myWall01{
+    border: solid white 4px; 
+}
+#myWall02{
+    border: solid white 4px; 
+}
+#myWall03{
+    border: solid white 4px; 
+}
+#myWall04{
+    border: solid white 4px; 
+}
+#myWall05{
+    border: solid white 4px; 
+}
+#myWall06{
+    border: solid white 4px; 
+}
+#up{
+width: 75px;
+height: 75px;
+}
+#down{
+width: 75px;
+height: 75px;
+}
+#left{
+width: 75px;
+height: 75px;
+}
+#right{
+    top: 100px;
+width: 75px;
+height: 75px;
+margin-left: 550px;
+}
+#myDiv01{
+    margin-left: 550px;
+}
+#myDiv02{
+    margin-left: 550px;
+}
 </style>
 <script>
-function myHitOther(my1,my2){
+function myHitOther(my1,my2,my3){
    left1   = parseInt(document.getElementById(my1).style.left)
    right1  = left1 + parseInt(document.getElementById(my1).style.width)
    top1    = parseInt(document.getElementById(my1).style.top)   
@@ -41,52 +83,80 @@ function myHitOther(my1,my2){
 </script>
 
 
-<img id="myImg01" src="cat2.jpg" style="position:absolute; left:200; top:200; width:100; height:100; " />
-<img id="myImg02" src="water.jpg" style="position:absolute; left:400; top:200; width:100; height:100; " />
+<img id="myImg01" src="cat2.jpg" style="position: absolute; left:0; top:225; width:100; height:100; " />
+<img id="myImg02" src="water.jpg" style="position: absolute; left:400; top:200; width:100; height:100; " />
 <img id="myImg03" src="evildog.jpg" style="position: absolute; left:200; top: 50; width: 100; height: 100;" />
 <img id="myImg04" src="snow.jpg" style="position: absolute; left: 200; top: 400; width: 100; height: 100;">
+<img id="myWall01" src="wall.jpg" style="position: absolute; left:0; top:400; width:193; height:100; " />
+<img id="myWall02" src="wall.jpg" style="position: absolute; left:300; top:400; width:200; height:100; " />
+<img id="myWall03" src="wall.jpg" style="position: absolute; left:400; top:300; width:100; height:93; " />
+<img id="myWall04" src="wall.jpg" style="position: absolute; left:305; top:50; width:195; height:100; " />
+<img id="myWall05" src="wall.jpg" style="position: absolute; left:400; top:157; width:100; height:40; " />
+
 
 <script>
     let a = 1
 </script>
 
 
-<input type=button value="go Right"  onclick="{
-   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 20
+<input id="right" type=button value="go Right"  onclick="{
+   document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 14
 
-   if ( myHitOther('myImg01','myImg02') ){
+   if ( myHitOther('myImg01','myImg02' ) ){
              document.getElementById('myImg01').src = 'sadcat.jpg'
              document.getElementById('myImg01').style.borderColor = 'red'
        //alert('you lose')
       document.getElementById('myImg01').style.left = '10px' 
+      document.getElementById('myImg01').style.top = '25px'
       document.getElementById('myDiv01').innerHTML = '' + a
       ++a;
    }
 }">
-<input type=button value="go up"  onclick="{
-    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 20
+<input id="up" type=button value="go up"  onclick="{
+    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 14
    
     if ( myHitOther('myImg01','myImg03') ){
         document.getElementById('myImg01').src = 'sadcat2.jpg'
               document.getElementById('myImg01').style.borderColor = 'red'
         //alert('you lose')
        document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.top = '25px'
        document.getElementById('myDiv01').innerHTML = '' + a
        ++a;
     }
  }">
- <input type=button value="go down"  onclick="{
-    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 20
-    if ( myHitOther('myImg01','myImg04') ){
+ <input id="down" type=button value="go down"  onclick="{
+    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 14
+    if ( myHitOther('myImg01','myImg04' ) ){
         document.getElementById('myImg01').src = 'sadcat3.jpg'
               document.getElementById('myImg01').style.borderColor = 'red'
         //alert('you lose')
-       document.getElementById('myImg01').style.left = '5px'
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.left = '25px'
      document.getElementById('myDiv01').innerHTML = '' + a
      ++a;
-     
+    }
+    if (myHitOther('myImg01','myWall01') ){
+        document.getElementById('myImg01').src = 'smolcat.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+        //alert('you lose')
+       document.getElementById('myImg01').style.top = '10px'
+     document.getElementById('myDiv01').innerHTML = '' + a
+     ++a;
     }
  }">
+<input id="left" type="button" value="go left" onclick="{
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 14
 
-<p># Of Damage Taken</p><div id="myDiv01">...</div>
+if ( myHitOther('myImg01') ){
+          document.getElementById('myImg01').src = 'sadcat.jpg'
+          document.getElementById('myImg01').style.borderColor = 'red'
+    //alert('you lose')
+   document.getElementById('myImg01').style.left =  '50px'
+   document.getElementById('myDiv01').innerHTML = '' + a
+   ++a;
+}
+}">
+
+<p id="myDiv02"># Of Damage Taken</p><div id="myDiv01">...</div>
  
