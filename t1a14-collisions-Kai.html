@@ -1,5 +1,9 @@
-<h2 align=center>t1a14 Collisions by Fred </h2>
+<h2 align=center>t1a14 Collisions by Fred </h2><h3 id="h3">Using WASD</h3>
+
 <style>
+    #h3{
+        margin-left: 550px;
+    }
 body{
     background-color: rgb(58, 58, 58);
     color: white;
@@ -61,6 +65,9 @@ margin-left: 550px;
 #myDiv02{
     margin-left: 550px;
 }
+#p1{
+    position: fixed;
+}
 </style>
 <script>
 function myHitOther(my1,my2,my3){
@@ -82,8 +89,10 @@ function myHitOther(my1,my2,my3){
 
 </script>
 
-
-<img id="myImg01" src="cat2.jpg" style="position: absolute; left:0; top:225; width:100; height:100; " />
+<div id="cat">
+    <img id="myImg01" src="cat2.jpg" style="position: absolute; left:0; top:225; width:100; height:100; " />
+    <div class="p1Details"></div>
+</div>
 <img id="myImg02" src="water.jpg" style="position: absolute; left:400; top:200; width:100; height:100; " />
 <img id="myImg03" src="evildog.jpg" style="position: absolute; left:200; top: 50; width: 100; height: 100;" />
 <img id="myImg04" src="snow.jpg" style="position: absolute; left: 200; top: 400; width: 100; height: 100;">
@@ -98,14 +107,14 @@ function myHitOther(my1,my2,my3){
     let a = 1
 </script>
 
-
+<!--
 <input id="right" type=button value="go Right"  onclick="{
    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 14
 
    if ( myHitOther('myImg01','myImg02' ) ){
              document.getElementById('myImg01').src = 'sadcat.jpg'
              document.getElementById('myImg01').style.borderColor = 'red'
-       //alert('you lose')
+   
       document.getElementById('myImg01').style.left = '10px' 
       document.getElementById('myImg01').style.top = '25px'
       document.getElementById('myDiv01').innerHTML = '' + a
@@ -118,7 +127,7 @@ function myHitOther(my1,my2,my3){
     if ( myHitOther('myImg01','myImg03') ){
         document.getElementById('myImg01').src = 'sadcat2.jpg'
               document.getElementById('myImg01').style.borderColor = 'red'
-        //alert('you lose')
+    
        document.getElementById('myImg01').style.left = '10px'
        document.getElementById('myImg01').style.top = '25px'
        document.getElementById('myDiv01').innerHTML = '' + a
@@ -126,11 +135,11 @@ function myHitOther(my1,my2,my3){
     }
  }">
  <input id="down" type=button value="go down"  onclick="{
-    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 14
+  document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 14
     if ( myHitOther('myImg01','myImg04' ) ){
         document.getElementById('myImg01').src = 'sadcat3.jpg'
               document.getElementById('myImg01').style.borderColor = 'red'
-        //alert('you lose')
+    
        document.getElementById('myImg01').style.left = '10px'
        document.getElementById('myImg01').style.left = '25px'
      document.getElementById('myDiv01').innerHTML = '' + a
@@ -139,24 +148,212 @@ function myHitOther(my1,my2,my3){
     if (myHitOther('myImg01','myWall01') ){
         document.getElementById('myImg01').src = 'smolcat.jpg'
               document.getElementById('myImg01').style.borderColor = 'red'
-        //alert('you lose')
+    
        document.getElementById('myImg01').style.top = '10px'
      document.getElementById('myDiv01').innerHTML = '' + a
      ++a;
     }
  }">
 <input id="left" type="button" value="go left" onclick="{
-  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 14
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 14
 
 if ( myHitOther('myImg01') ){
           document.getElementById('myImg01').src = 'sadcat.jpg'
           document.getElementById('myImg01').style.borderColor = 'red'
-    //alert('you lose')
+
    document.getElementById('myImg01').style.left =  '50px'
    document.getElementById('myDiv01').innerHTML = '' + a
    ++a;
 }
 }">
-
+--->
 <p id="myDiv02"># Of Damage Taken</p><div id="myDiv01">...</div>
  
+
+
+
+<script>
+    var up = false,
+    right = false,
+    down = false,
+    left = false,
+    x = window.innerWidth/6-630/6,
+    y = window.innerHeight/1-430/1
+document.addEventListener('keydown',press)
+function press(e){
+  if (e.keyCode === 87){
+    up = true;
+  }
+  if (e.keyCode === 68 ){
+    right = true
+  }
+  if (e.keyCode === 83 ){
+    down = true
+  }
+  if (e.keyCode === 65 ){
+    left = true
+  }
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 14
+
+if ( myHitOther('myImg01','myImg02' ) ){
+          document.getElementById('myImg01').src = 'sadcat.jpg'
+          document.getElementById('myImg01').style.borderColor = 'red'
+
+   document.getElementById('myImg01').style.left = '10px' 
+   document.getElementById('myImg01').style.top = '25px'
+   document.getElementById('myDiv01').innerHTML = '' + a
+   ++a;
+}
+   
+    if ( myHitOther('myImg01','myImg03') ){
+        document.getElementById('myImg01').src = 'sadcat2.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.top = '25px'
+       document.getElementById('myDiv01').innerHTML = '' + a
+       ++a;
+    }
+
+   
+    if ( myHitOther('myImg01','myImg03') ){
+        document.getElementById('myImg01').src = 'sadcat2.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.top = '25px'
+       document.getElementById('myDiv01').innerHTML = '' + a
+       ++a;
+    }
+
+    if ( myHitOther('myImg01','myImg04' ) ){
+        document.getElementById('myImg01').src = 'sadcat3.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.left = '25px'
+     document.getElementById('myDiv01').innerHTML = '' + a
+     ++a;
+    }
+    if (myHitOther('myImg01','myWall01') ){
+        document.getElementById('myImg01').src = 'smolcat.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.top = '10px'
+     document.getElementById('myDiv01').innerHTML = '' + a
+     ++a;
+    }
+  
+
+if ( myHitOther('myImg01') ){
+          document.getElementById('myImg01').src = 'sadcat.jpg'
+          document.getElementById('myImg01').style.borderColor = 'red'
+
+   document.getElementById('myImg01').style.left =  '50px'
+   document.getElementById('myDiv01').innerHTML = '' + a
+   ++a;
+}
+}
+document.addEventListener('keyup',release)
+function release(e){
+  if (e.keyCode === 87){
+    up = false
+  }
+  if (e.keyCode === 68 ){
+    right = false
+  }
+  if (e.keyCode === 83 ){
+    down = false
+  }
+  if (e.keyCode === 65 ){
+    left = false
+  }
+
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 14
+
+if ( myHitOther('myImg01','myImg02' ) ){
+          document.getElementById('myImg01').src = 'sadcat.jpg'
+          document.getElementById('myImg01').style.borderColor = 'red'
+
+   document.getElementById('myImg01').style.left = '10px' 
+   document.getElementById('myImg01').style.top = '25px'
+   document.getElementById('myDiv01').innerHTML = '' + a
+   ++a;
+}
+    if ( myHitOther('myImg01','myImg03') ){
+        document.getElementById('myImg01').src = 'sadcat2.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.top = '25px'
+       document.getElementById('myDiv01').innerHTML = '' + a
+       ++a;
+    }
+
+   
+    if ( myHitOther('myImg01','myImg03') ){
+        document.getElementById('myImg01').src = 'sadcat2.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.top = '25px'
+       document.getElementById('myDiv01').innerHTML = '' + a
+       ++a;
+    }
+
+    if ( myHitOther('myImg01','myImg04' ) ){
+        document.getElementById('myImg01').src = 'sadcat3.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.left = '10px'
+       document.getElementById('myImg01').style.left = '25px'
+     document.getElementById('myDiv01').innerHTML = '' + a
+     ++a;
+    }
+    if (myHitOther('myImg01','myWall01') ){
+        document.getElementById('myImg01').src = 'smolcat.jpg'
+              document.getElementById('myImg01').style.borderColor = 'red'
+    
+       document.getElementById('myImg01').style.top = '10px'
+     document.getElementById('myDiv01').innerHTML = '' + a
+     ++a;
+    }
+  
+
+if ( myHitOther('myImg01') ){
+          document.getElementById('myImg01').src = 'sadcat.jpg'
+          document.getElementById('myImg01').style.borderColor = 'red'
+
+   document.getElementById('myImg01').style.left =  '50px'
+   document.getElementById('myDiv01').innerHTML = '' + a
+   ++a;
+}
+}
+function gameLoop(){
+  var cat = document.querySelector('div#myImg01')
+  let p1D = document.querySelector('div.p1Details');
+
+  if (up){
+    y = y - 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (right){
+    x = x + 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (down){
+    y = y + 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  if (left){
+    x = x - 10
+    p1D.innerHTML = "X: " + x + "Y: " + y;
+  }
+  myImg01.style.left = x+'px'
+  myImg01.style.top = y+'px'
+
+
+  window.requestAnimationFrame(gameLoop)
+}
+window.requestAnimationFrame(gameLoop)
+</script>
