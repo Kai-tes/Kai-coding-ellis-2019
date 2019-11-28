@@ -1,0 +1,75 @@
+<style>
+body{
+    background-color: rgb(58, 58, 58);
+    color: white;
+}
+#myArea01{
+    background: rgb(98, 98, 98);
+color: white;
+}
+#myArea02{
+    background: rgb(98, 98, 98);
+color: white;
+}
+#myArea03{
+    background: rgb(98, 98, 98);
+color: white;
+}
+
+</style>
+
+
+
+<h1 align=center>t2a09-spy-kai</h1>
+<textarea id="myArea01" cols="70" rows="4">Hello How Are You</textarea><br>
+
+
+<input type="button" value="Encrypt" onclick="{
+ let myTemp = ''
+ myString = document.getElementById('myArea01').value.toLowerCase().split('')
+ for (let myLoop=0; myLoop < myString.length; myLoop++){
+     myTemp = myString[myLoop]
+     if (myString[myLoop] == 'a') {myTemp = 'q'}
+     if (myString[myLoop] == 'b') {myTemp = 'w'}
+     if (myString[myLoop] == 'c') {myTemp = 'e'}
+     if (myString[myLoop] == 'd') {myTemp = 'r'}
+     if (myString[myLoop] == 'e') {myTemp = 't'}
+     if (myString[myLoop] == 'f') {myTemp = 'y'}
+     if (myString[myLoop] == 'g') {myTemp = 'u'}
+     if (myString[myLoop] == 'h') {myTemp = 'i'}
+     if (myString[myLoop] == 'i') {myTemp = 'o'}
+     if (myString[myLoop] == 'j') {myTemp = 'p'}
+     if (myString[myLoop] == 'k') {myTemp = 'a'}
+     if (myString[myLoop] == 'l') {myTemp = 's'}
+     if (myString[myLoop] == 'm') {myTemp = 'd'}
+     if (myString[myLoop] == 'n') {myTemp = 'f'}
+     if (myString[myLoop] == 'o') {myTemp = 'g'}
+     if (myString[myLoop] == 'p') {myTemp = 'h'}
+     if (myString[myLoop] == 'q') {myTemp = 'j'}
+     if (myString[myLoop] == 'r') {myTemp = 'k'}
+     if (myString[myLoop] == 's') {myTemp = 'l'}
+     if (myString[myLoop] == 't') {myTemp = 'z'}
+     if (myString[myLoop] == 'u') {myTemp = 'x'}
+     if (myString[myLoop] == 'v') {myTemp = 'c'}
+     if (myString[myLoop] == 'w') {myTemp = 'v'}
+     if (myString[myLoop] == 'x') {myTemp = 'b'}
+     if (myString[myLoop] == 'y') {myTemp = 'n'}
+     if (myString[myLoop] == 'z') {myTemp = 'n'}
+     if (myString[myLoop] == ' ') {myTemp = 'm'}
+     myString[myLoop] = myTemp
+ }
+ document.getElementById('myArea02').value = myString.join('')
+}"><br><br>
+
+
+
+
+<textarea id="myArea02" cols="70" rows="4"></textarea><br>
+
+<input type="button" value="decrypt" onclick="{
+    alert('no')
+}"><br><br>
+
+
+
+<textarea id="myArea03" cols="70" rows="4"></textarea>
