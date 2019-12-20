@@ -21,6 +21,7 @@ color: white;
 
 
 <h1 align=center>t2a09-spy-kai</h1>
+<h3 align=center>Numbers Work to</h3>
 <textarea id="myArea01" cols="70" rows="4">Hello How Are You</textarea><br>
 
 
@@ -56,6 +57,16 @@ color: white;
      if (myString[myLoop] == 'y') {myTemp = 'n'}
      if (myString[myLoop] == 'z') {myTemp = 'n'}
      if (myString[myLoop] == ' ') {myTemp = 'm'}
+     if (myString[myLoop] == '1') {myTemp = '!'}
+     if (myString[myLoop] == '2') {myTemp = '@'}
+     if (myString[myLoop] == '3') {myTemp = '#'}
+     if (myString[myLoop] == '4') {myTemp = '$'}
+     if (myString[myLoop] == '5') {myTemp = '%'}
+     if (myString[myLoop] == '6') {myTemp = '^'}
+     if (myString[myLoop] == '7') {myTemp = '&'}
+     if (myString[myLoop] == '8') {myTemp = '*'}
+     if (myString[myLoop] == '9') {myTemp = '('}
+     if (myString[myLoop] == '0') {myTemp = ')'}
      myString[myLoop] = myTemp
  }
  document.getElementById('myArea02').value = myString.join('')
@@ -66,8 +77,8 @@ color: white;
 
 <textarea id="myArea02" cols="70" rows="4"></textarea><br>
 
-<input type="button" value="decrypt" onclick="{
-    alert('no')
+<input type="button" value="Check" onclick="{
+    alert('yes')
 }"><br><br>
 
 
