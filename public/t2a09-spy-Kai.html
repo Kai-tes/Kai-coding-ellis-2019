@@ -55,8 +55,8 @@ color: white;
      if (myString[myLoop] == 'w') {myTemp = 'v'}
      if (myString[myLoop] == 'x') {myTemp = 'b'}
      if (myString[myLoop] == 'y') {myTemp = 'n'}
-     if (myString[myLoop] == 'z') {myTemp = 'n'}
-     if (myString[myLoop] == ' ') {myTemp = 'm'}
+     if (myString[myLoop] == 'z') {myTemp = 'm'}
+     if (myString[myLoop] == ' ') {myTemp = ' '}
      if (myString[myLoop] == '1') {myTemp = '!'}
      if (myString[myLoop] == '2') {myTemp = '@'}
      if (myString[myLoop] == '3') {myTemp = '#'}
@@ -78,7 +78,50 @@ color: white;
 <textarea id="myArea02" cols="70" rows="4"></textarea><br>
 
 <input type="button" value="Check" onclick="{
-    alert('yes')
+ let myTemp = ''
+ myString = document.getElementById('myArea02').value.toLowerCase().split('')
+ for (let myLoop=0; myLoop < myString.length; myLoop++){
+     myTemp = myString[myLoop]
+     if (myString[myLoop] == 'q') {myTemp = 'a'}
+     if (myString[myLoop] == 'w') {myTemp = 'b'}
+     if (myString[myLoop] == 'e') {myTemp = 'c'}
+     if (myString[myLoop] == 'r') {myTemp = 'd'}
+     if (myString[myLoop] == 't') {myTemp = 'e'}
+     if (myString[myLoop] == 'y') {myTemp = 'f'}
+     if (myString[myLoop] == 'u') {myTemp = 'g'}
+     if (myString[myLoop] == 'i') {myTemp = 'h'}
+     if (myString[myLoop] == 'o') {myTemp = 'i'}
+     if (myString[myLoop] == 'p') {myTemp = 'j'}
+     if (myString[myLoop] == 'a') {myTemp = 'k'}
+     if (myString[myLoop] == 's') {myTemp = 'l'}
+     if (myString[myLoop] == 'd') {myTemp = 'm'}
+     if (myString[myLoop] == 'f') {myTemp = 'n'}
+     if (myString[myLoop] == 'g') {myTemp = 'o'}
+     if (myString[myLoop] == 'h') {myTemp = 'p'}
+     if (myString[myLoop] == 'j') {myTemp = 'q'}
+     if (myString[myLoop] == 'k') {myTemp = 'r'}
+     if (myString[myLoop] == 'l') {myTemp = 's'}
+     if (myString[myLoop] == 'z') {myTemp = 't'}
+     if (myString[myLoop] == 'x') {myTemp = 'u'}
+     if (myString[myLoop] == 'c') {myTemp = 'v'}
+     if (myString[myLoop] == 'v') {myTemp = 'w'}
+     if (myString[myLoop] == 'b') {myTemp = 'x'}
+     if (myString[myLoop] == 'n') {myTemp = 'y'}
+     if (myString[myLoop] == 'm') {myTemp = 'z'}
+     if (myString[myLoop] == ' ') {myTemp = ' '}
+     if (myString[myLoop] == '!') {myTemp = '1'}
+     if (myString[myLoop] == '@') {myTemp = '2'}
+     if (myString[myLoop] == '#') {myTemp = '3'}
+     if (myString[myLoop] == '$') {myTemp = '4'}
+     if (myString[myLoop] == '%') {myTemp = '5'}
+     if (myString[myLoop] == '^') {myTemp = '6'}
+     if (myString[myLoop] == '&') {myTemp = '7'}
+     if (myString[myLoop] == '*') {myTemp = '8'}
+     if (myString[myLoop] == '(') {myTemp = '9'}
+     if (myString[myLoop] == ')') {myTemp = '0'}
+     myString[myLoop] = myTemp
+ }
+ document.getElementById('myArea03').value = myString.join('')
 }"><br><br>
 
 
