@@ -1,0 +1,240 @@
+<style>
+    body{
+        color: white;
+        background: rgb(58, 58, 58);
+    }
+#text{
+    width: 250px;
+    height: 50px;
+    margin-top: 100px;
+    margin-left: 500px;
+    background-color: rgb(104, 104, 104);
+    color: white;
+}
+#one{
+width: 50px;
+height: 50px;
+border: solid 0px;
+margin-left: 500px;
+background-color: rgb(255, 102, 0);
+}
+#two{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#three{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#four{
+width: 50px;
+height: 50px;
+border: solid 0px;
+margin-left: 500px;
+background-color: rgb(255, 102, 0);
+}
+#five{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#six{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#seven{
+width: 50px;
+height: 50px;
+border: solid 0px;
+margin-left: 500px;
+background-color: rgb(255, 102, 0);
+}
+#eight{
+width: 50px;
+height: 50px; 
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#nine{
+width: 50px;
+height: 50px;
+border: solid 0px;
+top: 208px;
+left: 100px;
+background-color: rgb(255, 102, 0);
+}
+#zero{
+width: 50px;
+height: 50px;
+border: solid 0px;
+margin-left: 500px;
+background-color: rgb(255, 102, 0);
+}
+#dec{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#equal{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(255, 102, 0);
+}
+#c{
+width: 50px;
+height: 50px;
+border: solid 0px;
+background-color: rgb(104, 104, 104);
+}
+#div{
+    position: absolute;
+     width: 50px;
+    height: 50px;
+    top: 158px;
+    left: 708px;
+    border: solid 0px;
+    background-color: rgb(104, 104, 104);
+}
+#multi{
+    position: absolute;
+     width: 50px;
+    height: 50px;
+    top: 226px;
+    left: 708px ;
+    border: solid 0px;
+    background-color: rgb(104, 104, 104);
+}
+#sub{
+    position: absolute;
+     width: 50px;
+    height: 50px;
+   top: 293px;
+   left: 708px;
+   border: solid 0px;
+   background-color: rgb(104, 104, 104);
+}
+#plus{
+    position: absolute;
+     width: 50px;
+    height: 50px;
+    top: 362px;
+    left: 708px;
+    border: solid 0px;
+    background-color: rgb(104, 104, 104);
+}
+#myTextArea01{
+    background-color: rgb(104, 104, 104);
+    color: white;
+}
+
+</style>
+
+
+
+
+
+<input type="text" id="text" class="calculator-screen" value="" disabled>
+<input id="div" type="button" class="operator" value="/" onclick="{
+       //let myPrintout = '/';
+
+      
+document.getElementById('text').value = document.getElementById('text').value + '/'
+}">
+<input id="multi" type="button" class="operator" value="*" onclick="{
+       //let myPrintout = '*';
+   
+document.getElementById('text').value = document.getElementById('text').value + '*'
+}">
+<input id="sub" type="button" class="operator" value="-" onclick="{
+       //let myPrintout = '-';
+
+     
+document.getElementById('text').value = document.getElementById('text').value + '-'
+}">
+<input id="plus" type="button" class="operator" value="+" onclick="{
+      // let myPrintout = '+';
+      
+document.getElementById('text').value = document.getElementById('text').value + '+'
+}">
+<input id="c" type="button" class="all-clear" value="C" onclick="{
+       // let myPrintout = '';
+    
+document.getElementById('text').value = document.getElementById('text').value = ''
+}">
+<input id="seven" type="button" value="7" onclick="{
+   // let myPrintout = '7';
+    let n7 = 7;
+document.getElementById('text').value = document.getElementById('text').value + '7'
+}">
+<input id="eight" type="button" value="8" onclick="{
+   // let myPrintout = '8';
+    let n8 = 8;
+document.getElementById('text').value = document.getElementById('text').value + '8'
+}">
+<input id="nine" type="button" value="9" onclick="{
+   // let myPrintout = '9';
+    let n9 = 9;
+document.getElementById('text').value = document.getElementById('text').value + '9'
+}"><br>
+<br>
+<input id="four" type="button" value="4" onclick="{
+    //let myPrintout = '4';
+    let n4 = 4;
+document.getElementById('text').value = document.getElementById('text').value + '4'
+}">
+<input id="five" type="button" value="5" onclick="{
+    //let myPrintout = '5';
+    let n5 = 5;
+document.getElementById('text').value = document.getElementById('text').value + '5'
+}">
+<input id="six" type="button" value="6" onclick="{
+    //let myPrintout = '6';
+    let n6 = 6;
+document.getElementById('text').value = document.getElementById('text').value + '6'
+}"><br>
+<br>
+<input id="one" type="button" value="1" onclick="{
+    //let myPrintout = '1';
+    let n1 = 1;
+document.getElementById('text').value = document.getElementById('text').value + '1'
+}">
+<input id="two" type="button" value="2" onclick="{
+    //let myPrintout = '2';
+    let n2 = 2;
+document.getElementById('text').value = document.getElementById('text').value + '2'
+}">
+<input id="three" type="button" value="3" onclick="{
+    //let myPrintout = '3';
+    let n3 = 3;
+document.getElementById('text').value = document.getElementById('text').value + '3'
+}"><br>
+<br>
+<input id="zero" type="button" value="0" onclick="{
+    //let myPrintout = '0';
+    let n0 = 0;
+document.getElementById('text').value = document.getElementById('text').value + '0'
+}">
+<input id="dec" type="button" class="decimal" value="." onclick="{
+    //let myPrintout = '.';
+
+document.getElementById('text').value = document.getElementById('text').value + '.'
+}">
+<input id="equal" type="button" class="equal-sign operator" value="=" onclick="{
+    //let myPrintout = '=';
+
+//document.getElementById('text').value = document.getElementById('text').value + '='
+
+document.getElementById('myTextArea01').value += document.getElementById('text').value
+
+}">
+
+<textarea id="myTextArea01" cols="50" rows="20" ></textarea>
